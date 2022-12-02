@@ -2,14 +2,14 @@ function initPage() {
     var cityElement = document.getElementById("cityEntry");
     var searchElement = document.getElementById("searchButton");
     var clearElement = document.getElementById("clearSearchHistory");
-    var nameEl = document.getElementById("city-name");
+    var nameEl = document.getElementById("nameOfCity");
     var currentWindEl = document.getElementById("wind-speed");
     var currentPicEl = document.getElementById("current-pic");
     var currentTempEl = document.getElementById("temperature");
     var currentHumidityEl = document.getElementById("humidity");
     var historyEl = document.getElementById("history");
     var fivedayEl = document.getElementById("forecastHeader");
-    var todayweatherEl = document.getElementById("today-weather");
+    var todayweatherEl = document.getElementById("currentWeather");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
     // Variable containing the API Key
