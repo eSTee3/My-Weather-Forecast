@@ -97,8 +97,10 @@ function initPage() {
             historyItem.setAttribute("readonly", true);
             historyItem.setAttribute("class", "form-control d-block bg-secondary text-light border-dark");
             historyItem.setAttribute("value", searchHistory[i]);
+            
+            // Plugs the history search item's text, back into the API call above, so that the user can re-search any of their previous searches
             historyItem.addEventListener("click", function () {
-                getWeather(historyItem.value);
+                getWeather(this.value);
             })
             
             // Builds the list of search history via appends
