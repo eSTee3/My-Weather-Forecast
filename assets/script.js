@@ -101,6 +101,7 @@ function initPage() {
                 getWeather(historyItem.value);
             })
             
+            // Builds the list of search history via appends
             historyListElement.append(historyItem);
         }
     }
