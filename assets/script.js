@@ -9,7 +9,7 @@ function initPage() {
     var currentHumidityEl = document.getElementById("humidity");
     var historyListElement = document.getElementById("history");
     var forecastElement = document.getElementById("forecastHeader");
-    var todayweatherEl = document.getElementById("currentWeather");
+    var nowWeatherElement = document.getElementById("currentWeather");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
     // Variable containing the API Key
@@ -22,7 +22,7 @@ function initPage() {
 
             .then(function (response) {
 
-                todayweatherEl.classList.remove("d-none");
+                nowWeatherElement.classList.remove("d-none");
 
                 // Parse out all the current day's weather data and format reading accordingly (with % or speed or whatever's needed)
                 var currentDate = new Date(response.data.dt * 1000); 
